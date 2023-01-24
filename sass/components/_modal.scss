@@ -1,0 +1,197 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  padding: 40px 20px;
+  max-width: 450px;
+  width: calc(100% - 15px);
+  // min-height: 581px;
+  left: 50%;
+  top: 50%;
+  background-color: var(--header-bg);
+  border-radius: 4px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--cubic-active),
+    transform 250ms var(--cubic-active);
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+}
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--icon);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover .modal-close-icon,
+  &:focus .modal-close-icon {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-close-icon {
+  transition: fill 250ms var(--cubic-active);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 12px;
+}
+
+.signup-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--text-footer);
+}
+.input-list {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &.coment {
+    margin-bottom: 20px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  padding: 12px 42px;
+  cursor: pointer;
+  transition: border 250ms var(--cubic-active);
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic-active);
+}
+.modal-button {
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 52px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms var(--cubic-active);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  display: block;
+  letter-spacing: 0.06em;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-portfolio-accent);
+  }
+}
+
+.input-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  outline: none;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms var(--cubic-active);
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid var(--accent-color);
+  }
+}
+.modal-field {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.style-privacy {
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--text-footer);
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 250ms var(--cubic-active);
+  }
+  .modal-check:checked + &::before {
+    background-color: var(--accent-color);
+    border: none;
+    background-image: url(../img/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.conditions {
+  text-decoration: underline;
+  color: var(--accent-color);
+  // margin-left: 5px;
+  &-text {
+    font-size: 12px;
+  }
+}
+.form-input:hover,
+.form-input:focus-within {
+  border: 1px solid var(--accent-color);
+
+  &:hover + .input-icon,
+  &:focus-within + .input-icon {
+    fill: var(--accent-color);
+  }
+}
