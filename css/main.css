@@ -102,6 +102,7 @@ button {
   padding: 48px 40px;
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   background-color: var(--header-bg);
@@ -167,6 +168,15 @@ button {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+.menu-open__icon {
+  transition: fill 250ms var(--cubic-active);
+}
+
+.menu-open__icon:hover,
+.menu-open__icon:focus {
+  fill: var(--bg-portfolio-accent);
+}
+
 .mob-soc {
   font-family: "Roboto";
   font-style: normal;
@@ -193,8 +203,8 @@ button {
 }
 @media screen and (min-width: 768px) {
   .logo--head {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -340,25 +350,42 @@ button {
 }
 
 .hero {
-  background-image: var(--hero-gradient), url(../img/Img-10.jpg);
+  background-image: var(--hero-gradient), url(/img/img-x2/header\ mob-x1-2.jpg);
   background-color: var(--primary-bg-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 767px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 118px 0;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(/img/img-x2/header-mob\ x2.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 1199px;
+    max-width: 768px;
     padding: 118px 0;
+    background-image: var(--hero-gradient), url(/img/img-x2/header-x1-2.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(/img/img-x2/header-mob\ x2.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     padding: 200px 0;
+    background-image: var(--hero-gradient), url(../img/Img-10.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(/img/img-x2/header-desk-x2.jpg);
   }
 }
 .hero__title {
@@ -1168,10 +1195,6 @@ button {
 
 .workers-card-pos {
   width: 100%;
-}
-
-.workers-pos {
-  z-index: -1;
 }
 
 .workers-top-wrap {
