@@ -656,6 +656,12 @@ button {
   padding-bottom: 94px;
   background-color: var(--portfolio-bg);
 }
+@media screen and (max-width: 1199px) {
+  .team-list {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
 .clients {
   padding-top: 60px;
@@ -1266,6 +1272,11 @@ button {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .button-item {
+    margin-bottom: 30px;
   }
 }
 
