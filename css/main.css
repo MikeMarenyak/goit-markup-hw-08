@@ -313,6 +313,13 @@ button {
   gap: 10px;
   transition: color 250ms var(--cubic-active);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+  }
+}
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
@@ -350,7 +357,7 @@ button {
 }
 
 .hero {
-  background-image: var(--hero-gradient), url(/img/img-x2/header\ mob-x1-2.jpg);
+  background-image: var(--hero-gradient), url(../img/img-x2/header-mob-x1-2.jpg);
   background-color: var(--primary-bg-color);
   background-repeat: no-repeat;
   background-position: center;
@@ -361,19 +368,19 @@ button {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/img/img-x2/header-mob\ x2.jpg);
+    background-image: var(--hero-gradient), url(../img/img-x2/header-mob-x2.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
     padding: 118px 0;
-    background-image: var(--hero-gradient), url(/img/img-x2/header-x1-2.jpg);
+    background-image: var(--hero-gradient), url(./img/img-x2/header-x1-2.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/img/img-x2/header-mob\ x2.jpg);
+    background-image: var(--hero-gradient), url(../img/img-x2/header-mob-x2.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -385,7 +392,7 @@ button {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/img/img-x2/header-desk-x2.jpg);
+    background-image: var(--hero-gradient), url(../img/img-x2/header-desk-x2.jpg);
   }
 }
 .hero__title {
@@ -482,6 +489,11 @@ button {
   margin-bottom: 10px;
   font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+  .feature__title {
+    text-align: center;
+  }
+}
 .feature__text {
   font-weight: 400;
   line-height: 1.71;
@@ -509,8 +521,16 @@ button {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.1785714286;
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section-title {
+    font-size: 36px;
     margin-bottom: 50px;
   }
 }
@@ -550,6 +570,13 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .section-comand {
+    font-size: 28px;
+    line-height: 1.1785714286;
+    margin-bottom: 50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .section-comand {
@@ -683,6 +710,11 @@ button {
   width: 170px;
   height: 92px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-item {
+    width: 226px;
+  }
+}
 .clients-icon {
   fill: currentColor;
 }
@@ -765,12 +797,6 @@ button {
   color: var(--title-text-color);
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
-  .soc-name {
-    text-align: center;
-  }
-}
-
 .footer .container {
   display: flex;
   align-items: baseline;
@@ -906,6 +932,11 @@ button {
     text-align: center;
   }
 }
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .footer .container {
@@ -969,7 +1000,8 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
+    padding: 40px;
   }
 }
 
@@ -1126,6 +1158,11 @@ button {
 }
 .conditions-text {
   font-size: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .conditions-text {
+    font-size: 14px;
+  }
 }
 
 .form-input:hover,

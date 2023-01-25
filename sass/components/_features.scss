@@ -41,6 +41,9 @@
     color: var(--primary-text-color);
     margin-bottom: 10px;
     font-size: 14px;
+    @media screen and (max-width: 767px) {
+    text-align: center;
+}
   }
   &__text {
     font-weight: 400;

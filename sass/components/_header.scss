@@ -82,7 +82,11 @@
     gap: 10px;
     transition: color 250ms var(--cubic-active);
 
-   
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.1666666667;
+        letter-spacing: 0.02em;
+    }
 
     &:hover,
     &:focus {

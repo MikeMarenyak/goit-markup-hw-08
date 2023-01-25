@@ -24,8 +24,10 @@
     transform 250ms var(--cubic-active);
 
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    max-width: 528px;
+    padding: 40px;
   }
+  
 }
 .modal-close {
   display: flex;
@@ -184,6 +186,9 @@
   // margin-left: 5px;
   &-text {
     font-size: 12px;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 }
 .form-input:hover,
